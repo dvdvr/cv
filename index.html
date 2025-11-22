@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - David Vázquez Regueira</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .contact-info a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .profile {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .education-item, .project-item, .experience-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #e0e0e0;
+        }
+        
+        .education-item h3, .project-item h3, .experience-item h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        
+        .education-item .date, .project-item .tech, .experience-item .date {
+            color: #888;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .skill-category li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .languages {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .language {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .language h3 {
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .online-version {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+            border: 2px dashed #667eea;
+        }
+        
+        .online-version a {
+            color: #667eea;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        
+        .online-version a:hover {
+            text-decoration: underline;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            
+            .header {
+                background: #667eea;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .contact-info a {
+                background: rgba(255,255,255,0.2);
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>David Vázquez Reugueira</h1>
+            <p>Estudiante de Ingeniería Informática</p>
+            <div class="contact-info">
+                <a href="mailto:dvdvr05@gmail.com">📧 dvdvr05@gmail.com</a>
+                <a href="tel:+34654433120">📱 +34 654 433 120</a>
+                <a href="https://github.com/dvdvr" target="_blank">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/dvdvr/" target="_blank">💼 LinkedIn</a>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="online-version">
+                <p>🌐 <a href="https://dvdvr.github.io/cv" target="_blank">Ver versión online actualizada</a></p>
+            </div>
+            
+            <div class="section">
+                <h2>Perfil Profesional</h2>
+                <p class="profile">
+                    Estudiante de Ingeniería Informática con sólidos conocimientos en desarrollo de software y pasión por la tecnología. 
+                    Experiencia en proyectos académicos y personales utilizando diversas tecnologías modernas. 
+                    Busco oportunidades para aplicar y expandir mis habilidades técnicas en un entorno profesional dinámico.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2>Formación Académica</h2>
+                <div class="education-item">
+                    <h3>Grado en Ingeniería Informática</h3>
+                    <p class="date">Universidad de La Coruña | 2023 - Actualidad</p>
+                    <p>Actualmente cursando 3º curso.</p>
+                    <p>Asignaturas relevantes: Estructuras de Datos, Bases de Datos, Programación Orientada a Objetos, Desarrollo Web, Algoritmos Avanzados.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Habilidades Técnicas</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Lenguajes</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C/C++</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Herramientas</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>VS Code</li>
+                            <li>Linux/Unix</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Idiomas</h2>
+                <div class="languages">
+                    <div class="language">
+                        <h3>Español</h3>
+                        <p>Nativo</p>
+                    </div>
+                    <div class="language">
+                        <h3>Gallego</h3>
+                        <p>Nativo</p>
+                    </div>
+                    <div class="language">
+                        <h3>Inglés</h3>
+                        <p>Nivel B2 - Cambridge First Certificate</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Otros</h2>
+                <ul style="padding-left: 20px;">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
