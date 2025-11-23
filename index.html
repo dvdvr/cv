@@ -32,6 +32,14 @@
             color: white;
             padding: 40px;
             text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .header-text {
+            flex: 1;
         }
         
         .header h1 {
@@ -43,6 +51,32 @@
         .header p {
             font-size: 1.1em;
             font-weight: 300;
+        }
+        
+        .photo-container {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            flex-shrink: 0;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .photo-placeholder {
+            color: #999;
+            font-size: 0.85em;
+            text-align: center;
+            padding: 10px;
         }
         
         .contact-info {
@@ -69,14 +103,14 @@
         }
         
         .section {
-            margin-bottom: 35px;
+            margin-bottom: 25px;
         }
         
         .section h2 {
             color: #6B0F1A;
             font-size: 1.4em;
-            margin-bottom: 15px;
-            padding-bottom: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
             border-bottom: 2px solid #6B0F1A;
             font-weight: 500;
         }
@@ -89,7 +123,7 @@
         }
         
         .education-item, .project-item, .experience-item {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             padding-left: 15px;
             border-left: 2px solid #6B0F1A;
         }
@@ -104,29 +138,30 @@
         .education-item .date, .project-item .tech, .experience-item .date {
             color: #888;
             font-style: italic;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .project-item p {
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: #555;
             font-weight: 300;
         }
         
         .project-item ul {
             margin-left: 20px;
-            margin-top: 8px;
+            margin-top: 6px;
+            margin-bottom: 6px;
             color: #555;
         }
         
         .project-item li {
-            margin-bottom: 5px;
+            margin-bottom: 4px;
             font-weight: 300;
         }
         
         .project-link {
             display: inline-block;
-            margin-top: 8px;
+            margin-top: 6px;
             color: #6B0F1A;
             text-decoration: none;
             font-weight: 400;
@@ -187,9 +222,9 @@
         
         .online-version {
             background: #f9f9f9;
-            padding: 12px;
+            padding: 10px;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border-left: 3px solid #6B0F1A;
         }
         
@@ -197,7 +232,7 @@
             color: #6B0F1A;
             font-weight: 400;
             text-decoration: none;
-            font-size: 0.95em;
+            font-size: 0.9em;
         }
         
         .online-version a:hover {
@@ -213,6 +248,7 @@
             .container {
                 box-shadow: none;
                 max-width: 100%;
+                border: none;
             }
             
             .header {
@@ -227,11 +263,30 @@
             }
             
             .online-version {
-                display: none;
+                background: #f9f9f9;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .section {
+                page-break-inside: avoid;
             }
         }
         
         @media (max-width: 768px) {
+            .header {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            
+            .header-text {
+                text-align: center;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
             .header h1 {
                 font-size: 1.8em;
             }
@@ -249,19 +304,25 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>David Vázquez Regueira</h1>
-            <p>Estudiante de Ingeniería Informática</p>
-            <div class="contact-info">
-                <a href="mailto:dvdvr05@gmail.com">dvdvr05@gmail.com</a>
-                <a href="tel:+34654433120">+34 654 433 120</a>
-                <a href="https://github.com/dvdvr" target="_blank">github.com/dvdvr</a>
-                <a href="https://www.linkedin.com/in/dvdvr/" target="_blank">linkedin.com/in/dvdvr</a>
+            <div class="header-text">
+                <h1>David Vázquez Regueira</h1>
+                <p>Estudiante de Ingeniería Informática</p>
+                <div class="contact-info">
+                    <a href="mailto:dvdvr05@gmail.com">dvdvr05@gmail.com</a>
+                    <a href="tel:+34654433120">+34 654 433 120</a>
+                    <a href="https://github.com/dvdvr" target="_blank">github.com/dvdvr</a>
+                    <a href="https://www.linkedin.com/in/dvdvr/" target="_blank">linkedin.com/in/dvdvr</a>
+                </div>
+            </div>
+            <div class="photo-container">
+                <!-- Reemplaza esta línea con: <img src="foto.jpg" alt="David Vázquez Regueira"> -->
+                <div class="photo-placeholder">Tu foto aquí</div>
             </div>
         </div>
         
         <div class="content">
             <div class="online-version">
-                <p><a href="https://dvdvr.github.io/cv" target="_blank">Ver versión online actualizada</a></p>
+                <p><a href="https://dvdvr.github.io/cv" target="_blank">Ver versión online actualizada: dvdvr.github.io/cv</a></p>
             </div>
             
             <div class="section">
@@ -286,6 +347,19 @@
             <div class="section">
                 <h2>Proyectos</h2>
                 <div class="project-item">
+                    <h3>Shell Personalizada en C</h3>
+                    <p class="tech">C, Linux | 2025</p>
+                    <p>Desarrollo de una shell de comandos personalizada implementada en C con funcionalidades avanzadas.</p>
+                    <ul>
+                        <li>Interpretación y ejecución de comandos del sistema</li>
+                        <li>Gestión de procesos y señales</li>
+                        <li>Manejo de pipes y redirecciones de entrada/salida</li>
+                        <li>Implementación de comandos internos personalizados</li>
+                    </ul>
+                    <a href="https://github.com/dvdvr/shell" target="_blank" class="project-link">Ver proyecto en GitHub →</a>
+                </div>
+                
+                <div class="project-item">
                     <h3>Toma6 - Juego de Cartas en Java</h3>
                     <p class="tech">Java, Maven | 2023</p>
                     <p>Implementación completa del popular juego de cartas "Toma6" (6 Nimmt!) con soporte para 2-10 jugadores.</p>
@@ -305,8 +379,8 @@
                     <div class="skill-category">
                         <h3>Lenguajes</h3>
                         <ul>
-                            <li>Java</li>
                             <li>C/C++</li>
+                            <li>Java</li>
                             <li>Python</li>
                             <li>HTML/CSS</li>
                         </ul>
