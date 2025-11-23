@@ -28,7 +28,7 @@
         }
         
         .header {
-            background: #500000;
+            background: #6B0F1A;
             color: white;
             padding: 40px;
             text-align: left;
@@ -73,11 +73,11 @@
         }
         
         .section h2 {
-            color: #500000;
+            color: #6B0F1A;
             font-size: 1.4em;
             margin-bottom: 15px;
             padding-bottom: 8px;
-            border-bottom: 2px solid #500000;
+            border-bottom: 2px solid #6B0F1A;
             font-weight: 500;
         }
         
@@ -91,7 +91,7 @@
         .education-item, .project-item, .experience-item {
             margin-bottom: 20px;
             padding-left: 15px;
-            border-left: 2px solid #500000;
+            border-left: 2px solid #6B0F1A;
         }
         
         .education-item h3, .project-item h3, .experience-item h3 {
@@ -107,6 +107,36 @@
             margin-bottom: 10px;
         }
         
+        .project-item p {
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 300;
+        }
+        
+        .project-item ul {
+            margin-left: 20px;
+            margin-top: 8px;
+            color: #555;
+        }
+        
+        .project-item li {
+            margin-bottom: 5px;
+            font-weight: 300;
+        }
+        
+        .project-link {
+            display: inline-block;
+            margin-top: 8px;
+            color: #6B0F1A;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 0.95em;
+        }
+        
+        .project-link:hover {
+            text-decoration: underline;
+        }
+        
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -114,7 +144,7 @@
         }
         
         .skill-category h3 {
-            color: #500000;
+            color: #6B0F1A;
             margin-bottom: 10px;
             font-size: 1em;
             font-weight: 500;
@@ -135,7 +165,7 @@
             content: "•";
             position: absolute;
             left: 0;
-            color: #500000;
+            color: #6B0F1A;
         }
         
         .languages {
@@ -160,11 +190,11 @@
             padding: 12px;
             text-align: center;
             margin-bottom: 20px;
-            border-left: 3px solid #500000;
+            border-left: 3px solid #6B0F1A;
         }
         
         .online-version a {
-            color: #500000;
+            color: #6B0F1A;
             font-weight: 400;
             text-decoration: none;
             font-size: 0.95em;
@@ -186,7 +216,7 @@
             }
             
             .header {
-                background: #500000;
+                background: #6B0F1A;
                 print-color-adjust: exact;
                 -webkit-print-color-adjust: exact;
             }
@@ -194,6 +224,10 @@
             .contact-info a {
                 print-color-adjust: exact;
                 -webkit-print-color-adjust: exact;
+            }
+            
+            .online-version {
+                display: none;
             }
         }
         
@@ -236,6 +270,7 @@
                     Estudiante de Ingeniería Informática con sólidos conocimientos en desarrollo de software y pasión por la tecnología. 
                     Experiencia en proyectos académicos y personales utilizando diversas tecnologías modernas. 
                     Busco oportunidades para aplicar y expandir mis habilidades técnicas en un entorno profesional dinámico.
+                    Además, cuento con formación musical (Grado Profesional de Piano) e interés en la composición y producción.
                 </p>
             </div>
             
@@ -249,6 +284,22 @@
             </div>
             
             <div class="section">
+                <h2>Proyectos</h2>
+                <div class="project-item">
+                    <h3>Toma6 - Juego de Cartas en Java</h3>
+                    <p class="tech">Java, Maven | 2023</p>
+                    <p>Implementación completa del popular juego de cartas "Toma6" (6 Nimmt!) con soporte para 2-10 jugadores.</p>
+                    <ul>
+                        <li>Desarrollo de arquitectura modular separando lógica de negocio e interfaz de usuario</li>
+                        <li>Implementación completa de las reglas oficiales del juego</li>
+                        <li>Sistema automático de puntuación y gestión de turnos</li>
+                        <li>Interfaz de consola interactiva para múltiples jugadores</li>
+                    </ul>
+                    <a href="https://github.com/dvdvr/toma6" target="_blank" class="project-link">Ver proyecto en GitHub →</a>
+                </div>
+            </div>
+            
+            <div class="section">
                 <h2>Habilidades Técnicas</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
@@ -257,13 +308,14 @@
                             <li>Java</li>
                             <li>C/C++</li>
                             <li>Python</li>
-                            <li>HTML</li>
+                            <li>HTML/CSS</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>Herramientas</h3>
                         <ul>
                             <li>Git & GitHub</li>
+                            <li>Maven</li>
                             <li>VS Code</li>
                             <li>Linux/Unix</li>
                         </ul>
