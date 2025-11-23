@@ -151,6 +151,31 @@
             font-weight: 500;
         }
         
+        .project-item h3 a {
+            color: #333;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .project-item h3 a svg {
+            width: 18px;
+            height: 18px;
+            fill: #6B0F1A;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+        
+        .project-item h3 a:hover {
+            color: #6B0F1A;
+            text-decoration: underline;
+        }
+        
+        .project-item h3 a:hover svg {
+            opacity: 1;
+        }
+        
         .education-item .date, .project-item .tech, .experience-item .date {
             color: #888;
             font-style: italic;
@@ -378,7 +403,14 @@
             <div class="section">
                 <h2>Proyectos</h2>
                 <div class="project-item">
-                    <h3>Shell Personalizada en C</h3>
+                    <h3>
+                        <a href="https://github.com/dvdvr/shell" target="_blank" class="project-link">
+                            Shell Personalizada en C
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                    </h3>
                     <p class="tech">C, Linux | 2025</p>
                     <p>Desarrollo de una shell de comandos personalizada implementada en C con funcionalidades avanzadas.</p>
                     <ul>
@@ -387,11 +419,17 @@
                         <li>Manejo de pipes y redirecciones de entrada/salida</li>
                         <li>Implementación de comandos internos personalizados</li>
                     </ul>
-                    <a href="https://github.com/dvdvr/shell" target="_blank" class="project-link">Ver proyecto en GitHub →</a>
                 </div>
                 
                 <div class="project-item">
-                    <h3>Toma6 - Juego de Cartas en Java</h3>
+                    <h3>
+                        <a href="https://github.com/dvdvr/toma6" target="_blank" class="project-link">
+                            Toma6 - Juego de Cartas en Java
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                    </h3>
                     <p class="tech">Java, Maven | 2023</p>
                     <p>Implementación completa del popular juego de cartas "Toma6" (6 Nimmt!) con soporte para 2-10 jugadores.</p>
                     <ul>
@@ -400,7 +438,6 @@
                         <li>Sistema automático de puntuación y gestión de turnos</li>
                         <li>Interfaz de consola interactiva para múltiples jugadores</li>
                     </ul>
-                    <a href="https://github.com/dvdvr/toma6" target="_blank" class="project-link">Ver proyecto en GitHub →</a>
                 </div>
             </div>
             
