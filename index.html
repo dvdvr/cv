@@ -189,7 +189,7 @@
         
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
             gap: 20px;
         }
         
@@ -373,48 +373,40 @@
             <div class="section">
                 <h2>Proyectos</h2>
                 <div class="project-item">
-                    <h3>IPMDownloader - Gestor de Descargas Multihilo con GTK 4</h3>
-                    <p class="tech">Python, GTK 4, gettext | 2026 (en curso) | Proyecto en equipo de 3 personas</p>
-                    <p>Aplicación de escritorio para gestionar varias descargas simultáneas desde un servidor, con una interfaz que sigue respondiendo en todo momento.</p>
+                    <h3>IPMDownloader - Gestor de Descargas Multihilo (proyecto en equipo)</h3>
+                    <p class="tech">Python, GTK 4, gettext | 2026 - Actualidad</p>
+                    <p>Aplicación de escritorio para descargar varios archivos a la vez, con barra de progreso, estado y cancelación por descarga. Proyecto de grupo (3 personas) de la asignatura Interfaces Persona-Máquina.</p>
                     <ul>
-                        <li>Lista de descargas con barra de progreso, estado, tamaño, velocidad y botón de cancelar o pausar por cada una</li>
-                        <li>Arquitectura con separación estricta entre modelo y vista, y diseño orientado a objetos</li>
-                        <li>Programación concurrente: cada descarga en un hilo propio, sincronizado con el hilo principal de la interfaz</li>
-                        <li>Internacionalización con gettext y formato regional de números y fechas</li>
-                        <li>Documentación técnica con diagramas UML y control de versiones con Git</li>
+                        <li>Arquitectura con el modelo separado de la interfaz, sin dependencias gráficas en el modelo</li>
+                        <li>Una descarga por hilo, con actualizaciones seguras de la interfaz mediante <code>GLib.idle_add</code> y cierre limpio de los hilos</li>
+                        <li>Interfaz internacionalizada (gettext) y con formato regional de números y fechas</li>
                     </ul>
                 </div>
 
                 <div class="project-item">
-                    <h3>Plataforma de Gestión de Pruebas Ciclistas</h3>
-                    <p class="tech">Java, Maven, REST, SQL | 2026 (en curso) | Proyecto en equipo de 3 personas</p>
-                    <p>Aplicación distribuida en capas para gestionar pruebas ciclistas e inscripciones de participantes, desarrollada para la asignatura Internet y Sistemas Distribuidos.</p>
+                    <h3>Plataforma de Gestión de Pruebas Ciclistas (proyecto en equipo)</h3>
+                    <p class="tech">Java, Maven, REST, SQL | 2026 - Actualidad</p>
+                    <p>Aplicación por capas para gestionar pruebas ciclistas e inscripciones, con servicio web REST y cliente de línea de comandos. Proyecto de grupo (3 personas) de la asignatura Internet y Sistemas Distribuidos.</p>
                     <ul>
-                        <li>Arquitectura en capas: acceso a datos con base de datos relacional, lógica de negocio, servicios, acceso a servicios e interfaz de usuario</li>
-                        <li>Servicio web REST con datos en JSON y cliente de línea de comandos</li>
-                        <li>Gestión de pruebas, inscripciones con asignación de dorsal y recogida de dorsales</li>
-                        <li>Pruebas de integración de la capa modelo</li>
-                        <li>Trabajo en equipo con Git, por iteraciones y con commits por funcionalidad</li>
+                        <li>Capas de acceso a datos (base de datos relacional), lógica de negocio, servicios, acceso al servicio e interfaz de usuario</li>
+                        <li>Servicio web REST con datos en JSON, desplegable en Jetty o Tomcat</li>
+                        <li>Pruebas de integración de la capa modelo y desarrollo por iteraciones con Git</li>
                     </ul>
                 </div>
-
                 <div class="project-item">
                     <h3>
-                        <a href="https://github.com/dvdvr/typeInc." target="_blank" class="project-link">
+                        <a href="https://github.com/dvdvr/typeInc" target="_blank" class="project-link">
                             typeInc. - Juego Incremental de Mecanografía en Python
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
                             </svg>
                         </a>
                     </h3>
-                    <p class="tech">Python, JSON, Supabase | 2026</p>
+                    <p class="tech">Python, JSON | 2026</p>
                     <p>Juego incremental de mecanografía que se juega por terminal: escribir palabras genera puntos que se invierten en mejoras.</p>
                     <ul>
-                        <li>Dificultad progresiva: las palabras se hacen más largas al subir el nivel de multiplicador</li>
-                        <li>Tienda con multiplicadores, generadores pasivos de puntos y mejoras de generadores</li>
-                        <li>Sistema de buffs temporales, rachas y estadísticas de partida (precisión, palabra más larga, tiempo jugado)</li>
-                        <li>Guardado de partida en JSON con cálculo de ganancias offline</li>
-                        <li>Módulo de integración con Supabase para registro e inicio de sesión, guardado en la nube y ranking</li>
+                        <li>Dificultad progresiva y tienda con multiplicadores, generadores pasivos y mejoras</li>
+                        <li>Buffs temporales, rachas y estadísticas de partida; guardado en JSON con ganancias offline</li>
                     </ul>
                 </div>
 
@@ -466,6 +458,7 @@
                             <li>C/C++</li>
                             <li>Java</li>
                             <li>Python</li>
+                            <li>SQL</li>
                             <li>HTML/CSS</li>
                         </ul>
                     </div>
@@ -476,6 +469,14 @@
                             <li>Maven</li>
                             <li>VS Code</li>
                             <li>Linux/Unix</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tecnologías</h3>
+                        <ul>
+                            <li>GTK 4 (PyGObject)</li>
+                            <li>Servicios web REST / JSON</li>
+                            <li>Jetty / Tomcat</li>
                         </ul>
                     </div>
                 </div>
